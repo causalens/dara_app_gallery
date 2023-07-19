@@ -1,0 +1,10 @@
+[tool.poetry]
+name = "dara_dataset_wrangler"
+authors = []
+description = ""
+version = "1.0.0"
+
+[tool.poetry.dependencies]
+python = ">=3.8.0, <3.12.0"
+dara-core = "0.3.1"
+dara-components = "0.3.1"
