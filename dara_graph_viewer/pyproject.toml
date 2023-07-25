@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "dara_graph_viewer"
+authors = []
+description = ""
+version = "1.0.0"
+
+[[tool.poetry.source]]
+name = "causalens"
+url = "https://causalens.jfrog.io/artifactory/api/pypi/python-internal/simple/"
+default = true
+
+[tool.poetry.dependencies]
+python = ">=3.8.0, <3.12.0"
+dara-core = "0.3.3"
+dara-components = "0.3.3"
