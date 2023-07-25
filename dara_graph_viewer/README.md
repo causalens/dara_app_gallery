@@ -37,7 +37,7 @@ The `main.py` file is setting up the configuration of the application with `Conf
 The `ConfigurationBuilder` is adding the pages to the application.
 
 This application has three pages:
-- Intoduction - articulates the purpose of the app and allows the user to explore the datasets that the app utilizes. This page highlights how the `on_click_edge` argument of the `CausalGraphViewer` allows you to update your page based on what edge the user selects in their graph.
+- Introduction - articulates the purpose of the app and allows the user to explore the datasets that the app utilizes. This page highlights how the `on_click_edge` argument of the `CausalGraphViewer` allows you to update your page based on what edge the user selects in their graph.
 - Influential Individuals - allows the user to explore the influential individuals in their network through various centrality measures. This page highlights how to update the aesthetic properties of your graph to display important information to the user.
 - Strongest Paths - allows the user to explore the strongest path between two individuals in their network using Dijkstra's algorithm. This page highlights how the `on_click_node` argument of the `CausalGraphViewer` allows you to update your page based on what nodes the user selects in their graph.
 

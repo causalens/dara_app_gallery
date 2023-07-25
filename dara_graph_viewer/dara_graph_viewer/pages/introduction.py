@@ -48,10 +48,10 @@ def IntroductionPage() -> ComponentInstance:
         Stack(
             Card(
                 Text(
-                    'Social Network Analysis (SNA) is the process of investigating social structures through the use of graph thoery.'
+                    'Social Network Analysis (SNA) is the process of investigating social structures through the use of graph theory.'
                 ),
                 Text(
-                    'In this app, you will explore various factes of SNA with the network represented by the graph on the left and the dataset below.'
+                    'In this app, you will explore various facets of SNA with the network represented by the graph on the left and the dataset below.'
                 ),
                 Text(
                     "Select an edge on the graph to view a log of the individual's interactions."

@@ -65,7 +65,7 @@ def select_two_nodes(ctx: ActionContext) -> List[str]:
 
 def calculate_shortest_path(nodes: List[str]) -> List[str]:
     """
-    Calulcate the shortest path using Dijkstra's algorithm.
+    Calculate the shortest path using Dijkstra's algorithm.
 
     :param nodes: The list of two nodes in which to find the shortest path to and from.
     :return: A list of nodes that represents the shortest path.
@@ -164,7 +164,7 @@ def StrongestPathsPage() -> ComponentInstance:
         Stack(
             Card(
                 Text(
-                    "Select two nodes to find the strongest connection path between two individuals. The strongest path is found by running Dijkstra's Shortest Path algorithm and setting the weights to their respective inverse as many interactions indicates a strong connection between two nodes. If you have two nodes selected, you must deselect one or more nodes before selecting a different one."
+                    "Select two nodes to find the strongest connection path between two individuals. The strongest path is found by running Dijkstra's Shortest Path algorithm and setting the weights to their respective inverse as many interactions indicate a strong connection between two nodes. If you have two nodes selected, you must deselect one or more nodes before selecting a different one."
                 ),
                 title='Strongest Path',
                 accent=True,

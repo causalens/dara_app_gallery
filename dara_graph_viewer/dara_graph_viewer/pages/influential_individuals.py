@@ -18,7 +18,7 @@ COLOR_PALETTE = px.colors.sequential.Redor
 
 CENTRALITY_DEFINITIONS = {
     'Degree Centrality': 'The degree centrality of a node is the number of edges associated with it. The higher the degree, the more central the node is. The degree centrality is then normalized.',
-    'Betweenness Centrality': 'The betweenness centrality of a node is based on the shortest paths. For every pair of nodes in a connected graph, there exists at least one shortest path between the them. The betweenness centrality for each node is the number of these shortest paths that pass through the node.',
+    'Betweenness Centrality': 'The betweenness centrality of a node is based on the shortest paths. For every pair of nodes in a connected graph, there exists at least one shortest path between them. The betweenness centrality for each node is the number of these shortest paths that pass through the node.',
     'Eigenvector Centrality': 'A high eigenvector score means that a node is connected to many nodes who themselves have high scores.',
 }
 
@@ -67,7 +67,7 @@ def color_graph(scores: Dict[str, float]) -> CausalGraph:
 def CentralityScoresGraph(measure: str, scores: Dict[str, float]) -> ComponentInstance:
     """
     A component that explains what the selected centrality measure means and
-    displays a graph of the calculated centrality mesaure for each individual.
+    displays a graph of the calculated centrality measure for each individual.
 
     :param measure: The selected centrality measure.
     :param scores: The calculated centrality scores for each individual.
