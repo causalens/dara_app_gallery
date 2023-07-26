@@ -6,6 +6,6 @@ version = "1.0.0"
 
 [tool.poetry.dependencies]
 python = ">=3.8.0, <3.12.0"
-dara-core = "0.3.1"
-dara-components = "0.3.1"
+dara-core = "<2.0.0"
+dara-components = "<2.0.0"
 scikit-learn = "1.2.2"
