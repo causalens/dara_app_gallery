@@ -1,6 +1,7 @@
 # Misc
 .DS_Store
 .env
+poetry.lock
 
 # Python
 .venv

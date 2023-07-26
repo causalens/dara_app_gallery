@@ -4,7 +4,7 @@ import pandas as pd
 
 DATA_ROOT = os.environ.get('DATA_ROOT', './data')
 
-DATA = pd.read_csv(os.path.join(DATA_ROOT, 'sanctions.csv'))
+DATA = pd.read_csv(os.path.join(DATA_ROOT, 'gdp.csv'), index_col=0)
 
 PLOT_FEATURES = [col for col in DATA.columns if col not in ['area', 'year']]
 AREA_FEATURE = 'area'

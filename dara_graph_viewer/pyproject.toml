@@ -1,10 +1,10 @@
 [tool.poetry]
-name = "dara_data_interactivity"
+name = "dara_graph_viewer"
 authors = []
 description = ""
 version = "1.0.0"
 
 [tool.poetry.dependencies]
 python = ">=3.8.0, <3.12.0"
-dara-core = "<2.0.0"
-dara-components = "<2.0.0"
+dara-core = "0.3.3"
+dara-components = "0.3.3"
