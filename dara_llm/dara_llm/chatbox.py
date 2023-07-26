@@ -13,6 +13,7 @@ from dara.components import (
 )
 from dara.core import (
     DerivedVariable,
+    ResetVariables,
     TriggerVariable,
     UpdateVariable,
     Variable,
@@ -37,7 +38,7 @@ def ChatBox():
         open_chat = Variable(False)
 
         predefined_question = Variable('')
-        answer_predefined = DerivedVariable(
+        predefined_answer = DerivedVariable(
             query_chat_gpt,
             variables=[predefined_question],
             run_as_task=True,
@@ -45,7 +46,7 @@ def ChatBox():
         )
 
         custom_question = Variable('')
-        answer_custom = DerivedVariable(
+        custom_answer = DerivedVariable(
             query_chat_gpt,
             variables=[custom_question],
             run_as_task=True,
@@ -65,57 +66,74 @@ def ChatBox():
             If(
                 open_chat,
                 Card(
-                    Text('Try some of the example prompts below:'),
-                    Select(
-                        items=[
-                            "Explain the model's coefficients and whether they are significant.",
-                            "Explain the model's overall performance.",
-                            "Explain whether the distribution of my model's residuals is normal.",
-                            "Explain the model's R-Squared value.",
-                            "Explain the model's F-Statistic value.",
-                            "Explain the model's Log Likelihood value.",
-                        ],
-                        value=predefined_question,
-                    ),
                     Stack(
-                        Button(
-                            'Query',
-                            width='7vw',
-                            onclick=TriggerVariable(
-                                variable=answer_predefined
+                        Text('Try some of the example prompts below:'),
+                        Select(
+                            items=[
+                                "Explain the model's coefficients and whether they are significant.",
+                                "Explain the model's overall performance.",
+                                "Explain whether the distribution of my model's residuals is normal.",
+                                "Explain the model's R-Squared value.",
+                                "Explain the model's F-Statistic value.",
+                                "Explain the model's Log Likelihood value.",
+                            ],
+                            value=predefined_question,
+                            min_height='38px',
+                        ),
+                        Stack(
+                            Button(
+                                'Query',
+                                width='7vw',
+                                onclick=TriggerVariable(
+                                    variable=predefined_answer
+                                ),
+                                styling='secondary',
                             ),
-                            styling='secondary',
+                            align='end',
+                            hug=True,
                         ),
-                        align='end',
-                    ),
-                    Stack(Text(answer_predefined)),
-                    Text(
-                        'Or alternatively ask me anything given the context of this page:'
-                    ),
-                    Textarea(value=custom_question),
-                    Stack(
-                        Button(
-                            'Query',
-                            width='7vw',
-                            onclick=TriggerVariable(variable=answer_custom),
-                            styling='secondary',
+                        Text(predefined_answer),
+                        Text(
+                            'Or alternatively ask me anything given the context of this page:'
                         ),
-                        align='end',
-                    ),
-                    Stack(Text(answer_custom)),
-                    Stack(
-                        Button(
-                            'Close',
-                            onclick=UpdateVariable(
-                                lambda _: False, variable=open_chat
+                        Textarea(value=custom_question),
+                        Stack(
+                            Button(
+                                'Query',
+                                width='7vw',
+                                onclick=TriggerVariable(variable=custom_answer),
+                                styling='secondary',
                             ),
-                            width='10vw',
-                            styling='error',
+                            align='end',
+                            hug=True,
                         ),
-                        align='center',
-                        hug=True,
+                        Text(custom_answer),
+                        Stack(
+                            Button(
+                                'Close',
+                                onclick=[
+                                    UpdateVariable(
+                                        lambda _: False, variable=open_chat
+                                    ),
+                                    ResetVariables(
+                                        variables=[
+                                            custom_question,
+                                            predefined_question,
+                                            custom_answer,
+                                            predefined_answer,
+                                        ]
+                                    )
+                                ],
+                                width='10vw',
+                                styling='error',
+                            ),
+                            align='center',
+                            hug=True,
+                        ),
+                        scroll=True,
                     ),
                     width='40vw',
+                    height='70vh',
                 ),
             ),
             hug=True,
