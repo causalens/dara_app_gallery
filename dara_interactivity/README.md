@@ -10,7 +10,11 @@ This app will:
 
 ### Local Development
 
-In order to run the application locally, you need to have `dara-core` and `dara-components` installed locally. 
+In order to run the application, you need to have `dara-core` and `dara-components` installed locally. To install them, run:
+
+```
+poetry install
+```
 
 To run the application locally, run the following command in the root directory of the project:
 

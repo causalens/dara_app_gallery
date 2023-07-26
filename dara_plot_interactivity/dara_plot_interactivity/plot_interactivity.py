@@ -13,8 +13,8 @@ from dara_plot_interactivity.plotting_utils import top_ten_countries_barplot, wo
 class PlotInteractivityPage:
     def __init__(self) -> None:
         self.countries = Variable([])
-        self.feature = Variable('crops_production_tonnes')
-        self.year = Variable(2019)
+        self.feature = Variable('gdpPercap')
+        self.year = Variable(2007)
 
     def __call__(self) -> ComponentInstance:
         """
@@ -176,7 +176,7 @@ class PlotInteractivityPage:
         """
         if countries == []:
             return Stack(
-                Text(f"Please select countries on the map or in the selctor \
+                Text(f"Please select countries on the map or in the selector \
                         to view their {' '.join(feature.split('_'))} through time."),
                 align='center'
             )
