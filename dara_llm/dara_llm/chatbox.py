@@ -1,4 +1,5 @@
 import os
+from dotenv import load_dotenv
 
 from dara.components import (
     Button,
@@ -17,12 +18,18 @@ from dara.core import (
     Variable,
 )
 from dara.core.visual.themes import Light
-from dotenv import load_dotenv
 
 from dara_llm.tasks import query_chat_gpt
 
 
 def ChatBox():
+    """
+    A component that allows the user to query ChatGPT with questions about the model.
+    Predefined questions are defined for the user's convenience but there is also
+    an input for a custom question.
+    
+    To use this component the OPENAI_API_KEY environment variable must be set in .env.
+    """
     try:
         load_dotenv()
         assert os.getenv('OPENAI_API_KEY') is not None
@@ -60,7 +67,7 @@ def ChatBox():
                         items=[
                             "Explain the model's coefficients and whether they are significant.",
                             "Explain the model's overall performance.",
-                            "Explain the distribution of the model's residuals and whether this models follows the homoscedasticity assumption.",
+                            "Explain whether the distribution of my model's residuals is normal.",
                             "Explain the model's R-Squared value.",
                             "Explain the model's F-Statistic value.",
                             "Explain the model's Log Likelihood value.",

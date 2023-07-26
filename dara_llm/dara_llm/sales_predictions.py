@@ -1,10 +1,11 @@
 import pandas as pd
 import plotly.express as px
 import statsmodels.api as sm
+from sklearn.model_selection import train_test_split
+
 from dara.components import Card, Paragraph, Plotly, Select, Stack, Table, Text
 from dara.core import ComponentInstance, DataVariable, Variable, py_component
 from dara.core.visual.themes import Light
-from sklearn.model_selection import train_test_split
 
 from dara_llm.chatbox import ChatBox
 from dara_llm.definitions import (

@@ -4,11 +4,6 @@ authors = []
 description = ""
 version = "1.0.0"
 
-[[tool.poetry.source]]
-name = "causalens"
-url = "https://causalens.jfrog.io/artifactory/api/pypi/python-internal/simple/"
-default = true
-
 [tool.poetry.dependencies]
 python = ">=3.8.0, <3.12.0"
 dara-core = ">=0.3.3, <1.0.0"
@@ -16,5 +11,3 @@ dara-components = ">=0.3.3, <1.0.0"
 openai = "^0.27.8"
 statsmodels = "^0.14.0"
 scikit-learn = "^1.3.0"
-blue = "^0.9.1"
-isort = "^5.12.0"
