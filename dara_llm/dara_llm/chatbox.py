@@ -33,30 +33,33 @@ def ChatBox():
     try:
         load_dotenv()
         assert os.getenv('OPENAI_API_KEY') is not None
+
         open_chat = Variable(False)
+
         predefined_question = Variable('')
-        custom_question = Variable('')
         answer_predefined = DerivedVariable(
             query_chat_gpt,
             variables=[predefined_question],
             run_as_task=True,
             deps=[],
         )
+
+        custom_question = Variable('')
         answer_custom = DerivedVariable(
             query_chat_gpt,
             variables=[custom_question],
             run_as_task=True,
             deps=[],
         )
+
         return Overlay(
             If(
                 open_chat,
-                Stack(height='40px'),
+                Stack(),
                 Button(
                     'Ask ChatGPT',
                     onclick=UpdateVariable(lambda _: True, variable=open_chat),
                     width='10vw',
-                    height='40px',
                 ),
             ),
             If(
@@ -115,7 +118,6 @@ def ChatBox():
                     width='40vw',
                 ),
             ),
-            align='end',
             hug=True,
             position='top-right',
             padding='0rem',

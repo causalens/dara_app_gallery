@@ -39,7 +39,7 @@ def ScatterPlot(
     fig.update_layout(margin={'l': 10, 'r': 0, 'b': 10, 't': 40})
     fig.update_traces(marker_color=Light.colors.violet)
 
-    # Plot line of fit for that particular feature.
+    # Plot line of fit for that particular feature if specified.
     if feature_fit and x in MODEL.params.index:
         plot_data['Fit'] = (
             MODEL.params['const'] + plot_data[x] * MODEL.params[x]
@@ -160,7 +160,7 @@ def SalesPredictionsPage():
         Stack(
             Card(
                 Stack(
-                    Text('Select a feature', min_width='150px'),
+                    Text('Select a feature', width='25%'),
                     Select(
                         items=['TV', 'Radio', 'Newspaper'],
                         value=selected_feature,
