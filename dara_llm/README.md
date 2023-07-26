@@ -22,7 +22,7 @@ poetry run dara start
 This app uses OpenAI's ChatGPT model as its LLM of choice. To use this functionality you must set the `OPENAI_API_KEY` in your environment. You can so by setting the following in your .env file:
 
 ``` .env
-OPENAI_API_KEY=123abc456efg789hijk
+OPENAI_API_KEY=<API_KEY>
 ```
 
 If you do not have an OpenAI account you can sign up for one [here](https://platform.openai.com/signup). Once you have an account you can generate new API keys in your [user settings](https://platform.openai.com/account/api-keys).
