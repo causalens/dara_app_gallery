@@ -3,6 +3,7 @@ name = "dara_interactivity"
 authors = []
 description = ""
 version = "1.0.0"
+license = "Apache-2.0"
 
 [tool.poetry.dependencies]
 python = ">=3.8.0, <3.12.0"

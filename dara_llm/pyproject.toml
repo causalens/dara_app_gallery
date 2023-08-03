@@ -3,6 +3,7 @@ name = "dara_llm"
 authors = []
 description = ""
 version = "1.0.0"
+license = "Apache-2.0"
 
 
 [tool.poetry.dependencies]
