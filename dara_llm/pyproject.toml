@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "dara_llm"
+authors = []
+description = ""
+version = "1.0.0"
+license = "Apache-2.0"
+
+
+[tool.poetry.dependencies]
+python = ">=3.8.0, <3.12.0"
+dara-core = "<2.0.0"
+dara-components = "<2.0.0"
+openai = "^0.27.8"
+statsmodels = "^0.14.0"
+scikit-learn = "^1.3.0"
