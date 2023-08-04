@@ -1,6 +1,6 @@
 ## Plot Interactivity decisionApp
 
-![Plot Interactivity](https://github.com/causalens/dara_app_gallery/blob/master/img/plot_interactivity.png?raw=true) 
+![Plot Interactivity](https://github.com/causalens/dara_app_gallery/blob/DO-1580-add-images-to-app-gallery-readme-md/img/plot_interactivity.png?raw=true) 
 
 This app will:
 - demonstrate how to enable the user to interact with their bokeh plots through Variables and py_components
