@@ -1,5 +1,6 @@
 ## Custom CSS decisionApp
 
+![Custom CSS](https://github.com/causalens/dara_app_gallery/blob/DO-1580-add-images-to-app-gallery-readme-md/img/custom_css.png?raw=true) 
 
 This app will:
 
