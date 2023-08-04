@@ -1,6 +1,6 @@
 ## Dataset Wrangler decisionApp
 
-![Dataset Wrangler](https://github.com/causalens/dara_app_gallery/blob/DO-1580-add-images-to-app-gallery-readme-md/img/dataset_wrangler.png?raw=true) 
+![Dataset Wrangler](https://github.com/causalens/dara_app_gallery/blob/master/img/dataset_wrangler.png?raw=true) 
 
 This app will demostrate how to:
 - enable you to add data upload to your application

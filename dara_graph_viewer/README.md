@@ -1,6 +1,6 @@
 ## Graph Viewer decisionApp
 
-![Graph Viewer](https://github.com/causalens/dara_app_gallery/blob/DO-1580-add-images-to-app-gallery-readme-md/img/graph_viewer.png?raw=true) 
+![Graph Viewer](https://github.com/causalens/dara_app_gallery/blob/master/img/graph_viewer.png?raw=true) 
 
 This app will:
 - Demonstrate how to use the `CausalGraphViewer` to display your graphs or networks.
