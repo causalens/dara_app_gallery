@@ -1,5 +1,6 @@
 ## Interactivity decisionApp
 
+![Interactivity](https://github.com/causalens/dara_app_gallery/blob/master/img/interactivity.png?raw=true) 
 
 This app will:
 - demonstrate how to get inputs from the user through Dara Variables
