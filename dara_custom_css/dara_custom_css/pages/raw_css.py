@@ -148,12 +148,14 @@ class RawCSSPage:
                     Stack(
                         self.display_attribute('bold*', 'whether to bold the font'),
                         Switch(value=bold_var),
-                        direction='horizontal'
+                        direction='horizontal',
+                        align='center'
                     ),
                     Stack(
                         self.display_attribute('italic*', 'whether to italicize the font'),
                         Switch(value=italic_var),
-                        direction='horizontal'
+                        direction='horizontal',
+                        align='center'
                     ),
                     Stack(
                         self.display_attribute('color*', 'the text color of the component'),

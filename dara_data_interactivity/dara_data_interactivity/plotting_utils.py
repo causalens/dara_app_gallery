@@ -62,7 +62,7 @@ def _categorical_bar_plot(data: pd.DataFrame, feature: str, individual: Union[No
 
         title = f'{feature} Distribution (Selected Individuals)'
 
-    p = figure(title=title, toolbar_location=None, height=225, y_range=hist_data[feature],
+    p = figure(title=title, toolbar_location=None, sizing_mode='stretch_both', y_range=hist_data[feature],
                tools='hover', tooltips='@{%s}: @count' % feature)
     p.hbar(y=feature, right='count', left=0, source=ColumnDataSource(hist_data),
            line_color='white', height=0.8, color='color')
@@ -103,7 +103,7 @@ def _continuous_histogram(data: pd.DataFrame, feature: str, individual: Union[No
 
         title = f'{feature} Distribution (Selected Individuals)'
 
-    p = figure(title=title, toolbar_location=None, height=225, sizing_mode='stretch_width',
+    p = figure(title=title, toolbar_location=None, sizing_mode='stretch_both',
                tools='hover', tooltips=[(feature, '@{%s}{0.00}' % feature)])
     p.quad(bottom=0, top=feature, left='left', right='right', source=ColumnDataSource(hist_data), color='color')
 

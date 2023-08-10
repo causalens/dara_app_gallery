@@ -57,7 +57,7 @@ class DataInteractivityPage:
                         resolver=lambda ctx: ctx.inputs.new, variable=self.selected_rows),
                     multi_select=False,
                 ),
-                height='35%'
+                height='40%'
             ),
             Stack(
                 self.plot_selected_rows(self.selected_rows, self.graph_view, DATA),
