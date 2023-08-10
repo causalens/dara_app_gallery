@@ -149,7 +149,7 @@ def ChatBox():
                         scroll=True,
                     ),
                     width='40vw',
-                    height='70vh',
+                    height='90vh',
                 ),
             ),
             hug=True,
